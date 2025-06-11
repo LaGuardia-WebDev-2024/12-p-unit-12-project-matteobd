@@ -21,43 +21,58 @@ Select ONE Additional
     <title>Unit 12 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body style="background-color: orange;">
     <button id="mem1-button">Memory #1</button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
+
     <h1>My Top 3 Memories of <span>This Year</span></h1>
+
     <ol>
       <li>
         <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <p class="mem-text" id="desc1" style="display: none;">Senior Sunset at the park with my friends</p>
+        <img class="mem-img" id="img1" src="https://cdn.glitch.global/2e60df08-e4c4-4a91-a0f4-2dfbbbbba2c7/sunset.jpeg?v=1749654315642" width="300" style="display:none;" />
       </li>
 
       <li>
         <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <p class="mem-text" id="desc2" style="display: none;">Six Flags trip</p>
+        <img class="mem-img" id="img2" src="https://cdn.glitch.global/2e60df08-e4c4-4a91-a0f4-2dfbbbbba2c7/sixflag.jpeg?v=1749654325306" width="300" style="display:none;" />
       </li>
 
       <li>
         <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <p class="mem-text" id="desc3" style="display: none;">Watching Wicked with Jasmin</p>
+        <img class="mem-img" id="img3" src="https://cdn.glitch.global/2e60df08-e4c4-4a91-a0f4-2dfbbbbba2c7/wicked.jpeg?v=1749654327945" width="300" style="display:none;" />
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+        $("body").css("background-color", "#fff066"); // yellow
+        $("#mem1").css("color", "#c6a700"); // dark yellow
+        $("#desc1").show();
+        $("#img1").show();
       });
 
       $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+        $("body").css("background-color", "#ffc6e7"); // pink
+        $("#mem2").css("color", "#b3005f"); // dark pink
+        $("#desc2").show();
+        $("#img2").show();
       });
 
       $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
+        $("body").css("background-color", "#a8f5a2"); // green
+        $("#mem3").css("color", "#1e7722"); // dark green
+        $("#desc3").show();
+        $("#img3").show();
       });
     </script>
   </body>
 </html>
+
 
 <!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
